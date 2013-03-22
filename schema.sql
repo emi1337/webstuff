@@ -1,0 +1,2 @@
+CREATE TABLE users (id INTEGER PRIMARY KEY, email VARCHAR(128), password VARCHAR(30), name VARCHAR(255));
+CREATE TABLE tasks (id INTEGER PRIMARY KEY, title VARCHAR(128), created_at DATETIME, completed_at DATETIME, user_id INTEGER);
