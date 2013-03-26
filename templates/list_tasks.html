@@ -1,13 +1,23 @@
 <html>
 <head>
 	<title>Tipsy</title>
+	<link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
 </head>
 <body>
 	<h1>Task List</h1>
+	<p>Hello, this is some text! List things! <em>SERIOUSLY, DO IT.</em>
+	</p>
 	<ul>
 	{% for task in tasks %}
-	<li>Task {{ task['id'] }}: {{ task['title'] }}</li>
+	<form method="POST" action = "/edit_task">
+		<input type="checkbox" name = "task_done">Task {{ task['id'] }}: {{ task['title'] }}
+		<br><em>Edit Task Name: </em>
+		<!-- <a href="/{{ task['id'] }}"> -->
+		<input type="text" name="new_title">
+		<input type="submit">
+	</form>
 	{% endfor %}
 	</ul>
 </body>
-</html>
+</html>                                                                           
+  

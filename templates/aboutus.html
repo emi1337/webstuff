@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+  <style>
+  .listitem {
+  	color: purple;
+  	}
+  	</style>
+</head>
+<body style="font-family: Ariel, sans-serif">
+  <h1>About Me</h1>
+  
+  <img id= "cat" src = "http://placekitten.com/100/200">
+   
+  <ul>
+    <li>Name: Kris <span id="name"></span>
+    <li>Age:  30 <span id="age"></span>
+    <li>Hometown: SF <span id="hometown"></span>
+   </ul>
+
+   <script>
+   		var listItem = document.getElementsByTagName('li');
+   		for (var i = 0; i < listItem.length; i++ ) {
+   			listItem[i].className = "listitem";
+   		}
+   </script>
+  
+ </body>
+</html>
